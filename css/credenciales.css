@@ -1,0 +1,179 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:white;
+}
+
+.barra-print{
+    text-align:center;
+    padding:15px;
+    background:#0B5394;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.barra-print button{
+    padding:12px 22px;
+    margin:5px;
+    border:0;
+    border-radius:8px;
+    background:white;
+    color:#0B5394;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.hoja-gafetes{
+    display:grid;
+    grid-template-columns:repeat(2, 86mm);
+    gap:6mm;
+    justify-content:center;
+    padding:12mm;
+}
+
+.gafete{
+    width:86mm;
+    height:54mm;
+    background:white;
+    border:1px solid #ddd;
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    box-shadow:0 3px 10px rgba(0,0,0,.18);
+    page-break-inside:avoid;
+}
+
+.barra-lateral{
+    width:7mm;
+    height:100%;
+    background:#0B5394;
+}
+
+.gafete.personal .barra-lateral{
+    background:#7A1E3A;
+}
+
+.contenido{
+    flex:1;
+    padding:5mm 5mm 4mm 5mm;
+    position:relative;
+}
+
+.encabezado{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.logo{
+    width:30mm;
+    height:15mm;
+    object-fit:contain;
+}
+
+.titulo h2{
+    font-size:17px;
+    color:#0B5394;
+    font-weight:900;
+    letter-spacing:.5px;
+}
+
+.gafete.personal .titulo h2{
+    color:#7A1E3A;
+}
+
+.titulo p{
+    font-size:10px;
+    font-weight:bold;
+    color:#0B5394;
+    text-transform:uppercase;
+}
+
+.gafete.personal .titulo p{
+    color:#7A1E3A;
+}
+
+.centro{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:4mm;
+}
+
+.datos{
+    width:45mm;
+}
+
+.datos h3{
+    font-size:14px;
+    line-height:1.1;
+    font-weight:900;
+    color:#111;
+    margin-bottom:3mm;
+}
+
+.grado{
+    font-size:12px;
+    font-weight:bold;
+    text-transform:uppercase;
+    color:#0B5394;
+    margin-bottom:3mm;
+}
+
+.gafete.personal .grado{
+    color:#7A1E3A;
+}
+
+.codigo{
+    display:inline-block;
+    background:#0B5394;
+    color:white;
+    padding:5px 10px;
+    border-radius:5px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.gafete.personal .codigo{
+    background:#7A1E3A;
+}
+
+.qr{
+    width:26mm;
+    height:26mm;
+}
+
+.versiculo{
+    position:absolute;
+    bottom:3mm;
+    left:0;
+    right:0;
+    text-align:center;
+    font-size:10px;
+    font-weight:bold;
+    color:#333;
+}
+
+@media print{
+    .barra-print{
+        display:none;
+    }
+
+    .hoja-gafetes{
+        padding:6mm;
+        gap:4mm;
+        grid-template-columns:repeat(2, 86mm);
+    }
+
+    .gafete{
+        box-shadow:none;
+        border:1px dashed #999;
+    }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro QR - Asociación LP</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+
+<main class="contenedor">
+  <section class="card">
+    <h1>ASOCIACIÓN LP</h1>
+    <p class="subtitulo">Escáner automático de asistencia</p>
+
+    <div id="reader" style="width:100%; max-width:350px; margin:20px auto;"></div>
+
+    <p id="mensaje" class="nota">Presione iniciar cámara</p>
+
+    <button onclick="iniciarScanner()">📷 Iniciar cámara</button>
+    <button onclick="volver()">⬅ Volver</button>
+  </section>
+</main>
+
+<script src="../js/qr.js"></script>
+</body>
+</html>
