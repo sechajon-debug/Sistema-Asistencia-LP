@@ -1,176 +1,100 @@
-.hoja-gafetes{
-    display:grid;
-    grid-template-columns:repeat(2, 86mm);
-    gap:6mm;
-    justify-content:center;
-    padding:12mm;
-    background:white;
-}
-
-.gafete-pro{
-    width:86mm;
-    height:54mm;
-    background:white;
-    border-radius:10px;
-    overflow:hidden;
-    position:relative;
-    page-break-inside:avoid;
-    box-shadow:0 3px 10px rgba(0,0,0,.18);
-    border:1px solid #ddd;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
     font-family:Arial, Helvetica, sans-serif;
 }
 
-.barra-lateral{
-    position:absolute;
-    left:0;
-    top:0;
-    width:7mm;
-    height:100%;
-    background:#0B5394;
-}
-
-.gafete-pro.personal .barra-lateral{
-    background:#7A1E3A;
-}
-
-.curva{
-    position:absolute;
-    right:-20px;
-    width:105px;
-    height:105px;
-    border-radius:50%;
-    border:10px solid #0B5394;
-    opacity:.85;
-}
-
-.gafete-pro.personal .curva{
-    border-color:#7A1E3A;
-}
-
-.curva1{
-    top:-55px;
-}
-
-.curva2{
-    bottom:-55px;
-}
-
-.encabezado-gafete{
-    margin-left:10mm;
-    padding-top:5mm;
+body{
+    background:linear-gradient(135deg,#0B5394,#1E88E5);
+    min-height:100vh;
     display:flex;
+    justify-content:center;
     align-items:center;
-    gap:8px;
 }
 
-.logo-pro{
-    width:34mm;
-    height:15mm;
-    object-fit:contain;
+.contenedor{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
 }
 
-.encabezado-gafete h2{
-    margin:0;
-    font-size:18px;
-    color:#0B5394;
-    font-weight:900;
-    letter-spacing:.5px;
-}
-
-.gafete-pro.personal .encabezado-gafete h2{
-    color:#7A1E3A;
-}
-
-.encabezado-gafete span{
-    display:block;
-    font-size:10px;
-    font-weight:bold;
-    color:#0B5394;
+.card{
+    background:#fff;
+    width:420px;
+    border-radius:20px;
+    padding:35px;
     text-align:center;
-    margin-top:1px;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
 }
 
-.gafete-pro.personal .encabezado-gafete span{
-    color:#7A1E3A;
-}
-
-.cuerpo-gafete{
-    margin-left:10mm;
-    margin-right:6mm;
-    margin-top:3mm;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.info-gafete{
-    width:48mm;
-}
-
-.info-gafete h3{
-    font-size:15px;
-    line-height:1.1;
-    margin:0 0 4px;
-    font-weight:900;
-    color:#111;
-}
-
-.info-gafete p{
-    font-size:12px;
-    margin:0 0 6px;
+h1{
     color:#0B5394;
-    font-weight:bold;
-    text-transform:uppercase;
+    font-size:40px;
+    margin-bottom:10px;
 }
 
-.gafete-pro.personal .info-gafete p{
-    color:#7A1E3A;
+.subtitulo{
+    color:#666;
+    font-size:18px;
+    margin-bottom:35px;
 }
 
-.codigo-gafete{
-    display:inline-block;
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.menu button{
+    border:none;
+    padding:18px;
+    border-radius:12px;
+    font-size:20px;
+    cursor:pointer;
     background:#0B5394;
     color:white;
-    padding:5px 10px;
-    border-radius:5px;
-    font-size:11px;
-    font-weight:bold;
+    transition:.25s;
 }
 
-.gafete-pro.personal .codigo-gafete{
-    background:#7A1E3A;
+.menu button:hover{
+    background:#1565C0;
+    transform:scale(1.03);
 }
 
-.qr-pro{
-    width:25mm;
-    height:25mm;
-    z-index:2;
+.nota{
+    margin-top:30px;
+    color:#777;
+    font-size:14px;
 }
 
-.versiculo-pro{
-    position:absolute;
-    bottom:3mm;
-    left:0;
-    right:0;
+.input-codigo{
+    width:90%;
+    padding:14px;
+    font-size:20px;
     text-align:center;
-    font-size:10px;
-    color:#333;
-    font-weight:bold;
+    border-radius:10px;
+    border:2px solid #ddd;
+    margin-bottom:18px;
 }
 
-@media print{
-    .barra-print{
-        display:none;
+#reader{
+    margin:20px auto;
+}
+
+@media(max-width:600px){
+    .card{
+        width:95%;
+        padding:25px;
     }
 
-    .hoja-gafetes{
-        padding:6mm;
-        gap:4mm;
-        grid-template-columns:repeat(2, 86mm);
+    h1{
+        font-size:30px;
     }
 
-    .gafete-pro{
-        box-shadow:none;
-        border:1px dashed #999;
+    .menu button{
+        font-size:18px;
     }
 }
