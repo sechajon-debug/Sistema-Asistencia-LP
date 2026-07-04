@@ -1,2 +1,2 @@
-const APP_URL = "https://script.google.com/macros/s/AKfycbxnN9B4u4xIG9yxZTw3yGvhgwPSYPzxVOxfw-1aunyVudvOA1OlWJ8bHlaJtjDsFVx_/exec";
+const APP_URL = "https://script.google.com/macros/s/AKfycbzdl3Kxiew_WaSumAi5ImPeIrMS1WLtj8kG9VrJhG3wspaNCHK1khiDWI8cniTvGi-0/exec";
 const NOMBRE_INSTITUCION = "ASOCIACIÓN LP";
