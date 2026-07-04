@@ -11,9 +11,15 @@ window.recibirReporte = function(datos){
         if(r.estado === "PRESENTE") presentes++;
         if(r.estado === "TARDE") tarde++;
 
+        const fecha = new Date(r.fecha).toLocaleDateString("es-GT");
+        const hora = new Date(r.hora).toLocaleTimeString("es-GT", {
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+
         tabla.innerHTML += `
             <tr>
-                <td>${r.hora}</td>
+                <td>${hora}</td>
                 <td>${r.codigo}</td>
                 <td>${r.nombre}</td>
                 <td>${r.tipo}</td>
