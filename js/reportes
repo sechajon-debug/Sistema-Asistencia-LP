@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbyasDvWfOlAcew7XZhSAkfUMiz9gAiNHoTCRqQleWVXEvoG3oXMmCRUmjA0y6yyi0tR/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzdl3Kxiew_WaSumAi5ImPeIrMS1WLtj8kG9VrJhG3wspaNCHK1khiDWI8cniTvGi-0/exec";
 
 window.recibirReporte = function(datos){
     const tabla = document.getElementById("tabla");
