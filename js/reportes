@@ -1,0 +1,41 @@
+const API_URL = "https://script.google.com/macros/s/AKfycbyasDvWfOlAcew7XZhSAkfUMiz9gAiNHoTCRqQleWVXEvoG3oXMmCRUmjA0y6yyi0tR/exec";
+
+window.recibirReporte = function(datos){
+    const tabla = document.getElementById("tabla");
+    tabla.innerHTML = "";
+
+    let presentes = 0;
+    let tarde = 0;
+
+    datos.forEach(r => {
+        if(r.estado === "PRESENTE") presentes++;
+        if(r.estado === "TARDE") tarde++;
+
+        tabla.innerHTML += `
+            <tr>
+                <td>${r.hora}</td>
+                <td>${r.codigo}</td>
+                <td>${r.nombre}</td>
+                <td>${r.tipo}</td>
+                <td class="${r.estado === 'TARDE' ? 'tarde' : 'presente'}">${r.estado}</td>
+                <td>${r.grado}</td>
+            </tr>
+        `;
+    });
+
+    document.getElementById("total").innerText = datos.length;
+    document.getElementById("presentes").innerText = presentes;
+    document.getElementById("tarde").innerText = tarde;
+};
+
+function cargarReporte(){
+    const script = document.createElement("script");
+    script.src = API_URL + "?accion=reportes&callback=recibirReporte";
+    document.body.appendChild(script);
+}
+
+function volver(){
+    window.location.href = "../index.html";
+}
+
+cargarReporte();

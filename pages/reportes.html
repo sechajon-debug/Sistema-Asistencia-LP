@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reportes - La Promesa</title>
+  <link rel="stylesheet" href="../css/reportes.css">
+</head>
+<body>
+
+<div class="contenedor">
+  <div class="barra">
+    <h1>Reporte Diario</h1>
+    <button onclick="window.print()">🖨️ Imprimir</button>
+    <button onclick="volver()">← Volver</button>
+  </div>
+
+  <div class="resumen">
+    <div><h2 id="total">0</h2><p>Total registrados</p></div>
+    <div><h2 id="presentes">0</h2><p>Presentes</p></div>
+    <div><h2 id="tarde">0</h2><p>Tarde</p></div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Hora</th>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Tipo</th>
+        <th>Estado</th>
+        <th>Grado/Cargo</th>
+      </tr>
+    </thead>
+    <tbody id="tabla"></tbody>
+  </table>
+</div>
+
+<script src="../js/reportes.js"></script>
+</body>
+</html>
